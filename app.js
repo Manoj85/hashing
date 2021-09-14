@@ -1,17 +1,8 @@
 /**
- * Step 1: Verify 'crypto-js' module is installed for your project
- * After verifying it is installed, move on to Step 2. No code needs to be written here.
+ * Import from crypto-js module the sha265 library
  */
 
-/**
- * Step 2: Import from crypto-js module the sha265 library
- */
-
-// Write your code here
-
-/**
- * Variables: Do not change variable values to be able to answer the quiz
- */
+let SHA256 = require("crypto-js/sha256");
 
 const data1 = "Blockchain Rock!";
 const dataObject = {
@@ -21,13 +12,13 @@ const dataObject = {
 };
 
 /**
- * Step 3: Add code to the `generate hash function
+ * Add code to the `generate hash function
  * Function that generate the SHA256 Hash
  * @param {*} obj 
  */
 
 function generateHash(obj) {
-	// Write your code here
+	return SHA256(JSON.stringify(obj))
 }
 
 console.log(`SHA256 Hash: ${generateHash(data1)}`);
